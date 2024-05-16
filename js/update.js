@@ -34,7 +34,7 @@ $(function(){
         $.ajax({
             url: FILMS_API_URL,
             method: 'PUT',
-            dataType: CONTENT_TYPE_MAP[getContentType()],
+            dataType: CONTENT_TYPE_MAP[getContentTypeFromSessionStorage()],
             headers: getRequestHeaders(),
             data: serializeRequestData(requestData),
             success: handleFilmUpdate,
