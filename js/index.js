@@ -106,3 +106,8 @@ $(document).ready(function(){
         window.location.href = `../films.html?search=${search}`;
     });
 });
+
+const onFilmDelete = (data) => {
+    alert(`Film deleted successfuly`)
+    window.location.href="../films.html"
+}
