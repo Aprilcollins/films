@@ -1,5 +1,5 @@
 // const FILMS_API_URL = 'http://localhost:8080/Collins-film-project-mvc/films';
-const FILMS_API_URL = 'http://localhost:8080/Collins-film-project-mvc/films';
+const FILMS_API_URL = 'http://collins-coco-env.eba-widchcwm.eu-north-1.elasticbeanstalk.com/films';
 const CONTENT_TYPE_JSON = 'application/json';
 const CONTENT_TYPE_XML = 'application/xml';
 const CONTENT_TYPE_TEXT = 'text/plain';
