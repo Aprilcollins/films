@@ -9,7 +9,7 @@ $(function(){
 
     // Function to handle single film request success
     const handleSingleFilmRequest = (filmData) => {
-        const film = deserializeFilmListResponse(filmData);
+        const film = deserializeFilmResponse(filmData);
         populateUpdateForm(film);
     };
 
