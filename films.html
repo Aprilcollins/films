@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Films</title>
+<script src="https://kit.fontawesome.com/37c1bf0316.js"
+	crossorigin="anonymous"></script>
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="index.css" rel="stylesheet">
+</head>
+<body>
+	<header class="bg-primary text-white py-4">
+		<div class="container">
+			<a href="films.html" id="header-anchor">
+				<div class="row align-items-center">
+					<div class="col-auto">
+						<i class="fa-solid fa-house-crack fa-3x house-icon"></i>
+					</div>
+					<div class="col">
+						<h1 class="display-4 head-font">ST. Collins Films House</h1>
+					</div>
+				</div>
+			</a>
+			<div class="row py-4">
+				<form id="content-type-form">
+					<label for="content-type-select">Content Type:</label>
+					<select id="content-type-select" name="content-type">
+						<option value="application/json">JSON</option>
+						<option value="application/xml" selected>XML</option>
+						<option value="text/plain">Text</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</header>
+	
+	<h2>All Films</h2>
+	<div class="container mt-3 padding-below bg-light menu-section">
+		<div class="row justify-content-between">
+			<div class="col-auto">
+				<form id="search-film-form" class="form-inline">
+					<div class="input-group">
+						<input type="text" id="search-input" name="search"
+							class="form-control">
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-primary search-button">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-auto align-self-center">
+				<a class="btn btn-primary" href="films-insert.html"
+					style="border-radius: 5px;"> <i class="fa-solid fa-film"></i> <span>Add
+						Film</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<table class="table table-box">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Director</th>
+					<th>Stars</th>
+					<th>Year</th>
+					<th>Review</th>
+					<th>Update</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody id="tbody-film-body">
+			
+			</tbody>
+		</table>
+		<div class="container pagination-box">
+			<div class="row">
+				<div class="col">
+					<p>Total Films: <span id="total-films"></span></p>
+				</div>
+				<div class="col">
+					<p>Total Pages: <span id="total-pages"></span></p>
+				</div>
+				<div class="col">
+					<p>Current Page Number: <span id="current-page"></span></p>
+				</div>
+				<div class="col">
+					<p>Current Page Size: <span id="current-page-size"></span></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button id="first-page" class="btn btn-secondary mr-2">First</button>
+					<button id="prev-page" class="btn btn-secondary mr-2">Previous</button>
+					<button id="next-page" class="btn btn-secondary mr-2">Next</button>
+					<button id="last-page" class="btn btn-secondary">Last</button>
+				</div>
+			</div>
+		</div>
+		
+	<script src="js/films.js"></script>    
+	<script src="js/index.js"></script>
+</body>
+</html>
