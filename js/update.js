@@ -36,7 +36,7 @@ $(function(){
             method: 'PUT',
             dataType: CONTENT_TYPE_MAP[getContentType()],
             headers: getRequestHeaders(),
-            data: serializeRequest(requestData),
+            data: serializeRequestData(requestData),
             success: handleFilmUpdate,
             error: (xhr, status, error) => {
                 console.error(error);

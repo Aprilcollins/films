@@ -5,9 +5,9 @@ $(
         $.ajax({
             url: FILMS_API_URL,
             method: 'POST',
-            dataType: dataTypeDictionary[getContentType()],
-            headers: getRequestHeader(),
-            data: serializeRequest(requestData),
+            dataType: CONTENT_TYPE_MAP[getContentTypeFromSessionStorage()],
+            headers: getRequestHeaders(),
+            data: serializeRequestData(requestData),
             success: onSuccessFilmUpload,
             error: (xhr, status, error) => {
                 console.error(error);
